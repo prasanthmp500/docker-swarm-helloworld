@@ -1,0 +1,17 @@
+version: "3"
+
+services:
+  web:
+    image: prasanthmp500/ubuntu:latest
+    ports:
+      - 8080
+      - 22
+    deploy:
+      replicas: 6
+networks:
+  default:
+    external:
+      name: my-multihost-network
+
+volumes:
+  mydata:
